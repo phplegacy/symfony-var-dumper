@@ -7,8 +7,16 @@ The VarDumper component provides mechanisms for walking through any arbitrary
 PHP variable. It provides a better `dump()` function that you can use instead
 of `var_dump()`.
 
-Resources
----------
+
+## Installation
+
+Require this package with composer using the following command:
+
+```bash
+composer require phplegacy/symfony-var-dumper --dev
+```
+
+## Resources
 
 * [Documentation](https://symfony.com/doc/5.4/components/var_dumper.html)
 
