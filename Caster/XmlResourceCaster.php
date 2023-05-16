@@ -22,7 +22,7 @@ use Symfony\Component\VarDumper\Cloner\Stub;
  */
 class XmlResourceCaster
 {
-    private const XML_ERRORS = [
+    const XML_ERRORS = [
         \XML_ERROR_NONE => 'XML_ERROR_NONE',
         \XML_ERROR_NO_MEMORY => 'XML_ERROR_NO_MEMORY',
         \XML_ERROR_SYNTAX => 'XML_ERROR_SYNTAX',

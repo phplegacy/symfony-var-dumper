@@ -34,7 +34,10 @@ class CliDescriptor implements DumpDescriptorInterface
         $this->dumper = $dumper;
     }
 
-    public function describe(OutputInterface $output, Data $data, array $context, int $clientId): void
+    /**
+     * @return void
+     */
+    public function describe(OutputInterface $output, Data $data, array $context, int $clientId)
     {
         $io = $output instanceof SymfonyStyle ? $output : new SymfonyStyle(new ArrayInput([]), $output);
         $this->dumper->setColors($output->isDecorated());

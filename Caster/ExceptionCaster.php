@@ -300,7 +300,11 @@ class ExceptionCaster
         return $a;
     }
 
-    private static function traceUnshift(array &$trace, ?string $class, string $file, int $line): void
+    /**
+     * @param string|null $class
+     * @return void
+     */
+    private static function traceUnshift(array &$trace, $class, string $file, int $line)
     {
         if (isset($trace[0]['file'], $trace[0]['line']) && $trace[0]['file'] === $file && $trace[0]['line'] === $line) {
             return;
@@ -312,7 +316,10 @@ class ExceptionCaster
         ]);
     }
 
-    private static function extractSource(string $srcLines, int $line, int $srcContext, string $lang, ?string $file, array $frame): EnumStub
+    /**
+     * @param string|null $file
+     */
+    private static function extractSource(string $srcLines, int $line, int $srcContext, string $lang, $file, array $frame): EnumStub
     {
         $srcLines = explode("\n", $srcLines);
         $src = [];

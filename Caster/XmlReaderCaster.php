@@ -22,7 +22,7 @@ use Symfony\Component\VarDumper\Cloner\Stub;
  */
 class XmlReaderCaster
 {
-    private const NODE_TYPES = [
+    const NODE_TYPES = [
         \XMLReader::NONE => 'NONE',
         \XMLReader::ELEMENT => 'ELEMENT',
         \XMLReader::ATTRIBUTE => 'ATTRIBUTE',

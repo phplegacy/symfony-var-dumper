@@ -21,7 +21,7 @@ use Symfony\Component\VarDumper\Cloner\Stub;
  */
 class SymfonyCaster
 {
-    private const REQUEST_GETTERS = [
+    const REQUEST_GETTERS = [
         'pathInfo' => 'getPathInfo',
         'requestUri' => 'getRequestUri',
         'baseUrl' => 'getBaseUrl',

@@ -22,7 +22,7 @@ use Symfony\Component\VarDumper\Cloner\Stub;
  */
 class PgSqlCaster
 {
-    private const PARAM_CODES = [
+    const PARAM_CODES = [
         'server_encoding',
         'client_encoding',
         'is_superuser',
@@ -35,7 +35,7 @@ class PgSqlCaster
         'standard_conforming_strings',
     ];
 
-    private const TRANSACTION_STATUS = [
+    const TRANSACTION_STATUS = [
         \PGSQL_TRANSACTION_IDLE => 'PGSQL_TRANSACTION_IDLE',
         \PGSQL_TRANSACTION_ACTIVE => 'PGSQL_TRANSACTION_ACTIVE',
         \PGSQL_TRANSACTION_INTRANS => 'PGSQL_TRANSACTION_INTRANS',
@@ -43,7 +43,7 @@ class PgSqlCaster
         \PGSQL_TRANSACTION_UNKNOWN => 'PGSQL_TRANSACTION_UNKNOWN',
     ];
 
-    private const RESULT_STATUS = [
+    const RESULT_STATUS = [
         \PGSQL_EMPTY_QUERY => 'PGSQL_EMPTY_QUERY',
         \PGSQL_COMMAND_OK => 'PGSQL_COMMAND_OK',
         \PGSQL_TUPLES_OK => 'PGSQL_TUPLES_OK',
@@ -54,7 +54,7 @@ class PgSqlCaster
         \PGSQL_FATAL_ERROR => 'PGSQL_FATAL_ERROR',
     ];
 
-    private const DIAG_CODES = [
+    const DIAG_CODES = [
         'severity' => \PGSQL_DIAG_SEVERITY,
         'sqlstate' => \PGSQL_DIAG_SQLSTATE,
         'message' => \PGSQL_DIAG_MESSAGE_PRIMARY,

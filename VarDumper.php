@@ -63,7 +63,10 @@ class VarDumper
         return $prevHandler;
     }
 
-    private static function register(): void
+    /**
+     * @return void
+     */
+    private static function register()
     {
         $cloner = new VarCloner();
         $cloner->addCasters(ReflectionCaster::UNSET_CLOSURE_FILE_INFO);

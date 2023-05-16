@@ -22,7 +22,7 @@ use Symfony\Component\VarDumper\Cloner\Stub;
  */
 class AmqpCaster
 {
-    private const FLAGS = [
+    const FLAGS = [
         \AMQP_DURABLE => 'AMQP_DURABLE',
         \AMQP_PASSIVE => 'AMQP_PASSIVE',
         \AMQP_EXCLUSIVE => 'AMQP_EXCLUSIVE',
@@ -39,7 +39,7 @@ class AmqpCaster
         \AMQP_REQUEUE => 'AMQP_REQUEUE',
     ];
 
-    private const EXCHANGE_TYPES = [
+    const EXCHANGE_TYPES = [
         \AMQP_EX_TYPE_DIRECT => 'AMQP_EX_TYPE_DIRECT',
         \AMQP_EX_TYPE_FANOUT => 'AMQP_EX_TYPE_FANOUT',
         \AMQP_EX_TYPE_TOPIC => 'AMQP_EX_TYPE_TOPIC',

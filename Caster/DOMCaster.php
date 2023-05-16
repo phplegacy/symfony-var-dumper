@@ -22,7 +22,7 @@ use Symfony\Component\VarDumper\Cloner\Stub;
  */
 class DOMCaster
 {
-    private const ERROR_CODES = [
+    const ERROR_CODES = [
         \DOM_PHP_ERR => 'DOM_PHP_ERR',
         \DOM_INDEX_SIZE_ERR => 'DOM_INDEX_SIZE_ERR',
         \DOMSTRING_SIZE_ERR => 'DOMSTRING_SIZE_ERR',
@@ -42,7 +42,7 @@ class DOMCaster
         \DOM_VALIDATION_ERR => 'DOM_VALIDATION_ERR',
     ];
 
-    private const NODE_TYPES = [
+    const NODE_TYPES = [
         \XML_ELEMENT_NODE => 'XML_ELEMENT_NODE',
         \XML_ATTRIBUTE_NODE => 'XML_ATTRIBUTE_NODE',
         \XML_TEXT_NODE => 'XML_TEXT_NODE',
