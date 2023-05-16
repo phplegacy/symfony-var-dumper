@@ -22,9 +22,12 @@ class ArgsStub extends EnumStub
 {
     private static $parameters = [];
 
-    public function __construct(array $args, string $function, ?string $class)
+    /**
+     * @param string|null $class
+     */
+    public function __construct(array $args, string $function, $class)
     {
-        [$variadic, $params] = self::getParameters($function, $class);
+        list($variadic, $params) = self::getParameters($function, $class);
 
         $values = [];
         foreach ($args as $k => $v) {
@@ -49,7 +52,10 @@ class ArgsStub extends EnumStub
         }
     }
 
-    private static function getParameters(string $function, ?string $class): array
+    /**
+     * @param string|null $class
+     */
+    private static function getParameters(string $function, $class): array
     {
         if (isset(self::$parameters[$k = $class.'::'.$function])) {
             return self::$parameters[$k];

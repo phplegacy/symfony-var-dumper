@@ -158,7 +158,10 @@ class IntlCaster
         return self::castError($c, $a);
     }
 
-    private static function castError(object $c, array $a): array
+    /**
+     * @param object $c
+     */
+    private static function castError($c, array $a): array
     {
         if ($errorCode = $c->getErrorCode()) {
             $a += [

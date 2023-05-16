@@ -22,24 +22,24 @@ use Symfony\Component\VarDumper\Cloner\Stub;
  */
 class RedisCaster
 {
-    private const SERIALIZERS = [
+    const SERIALIZERS = [
         \Redis::SERIALIZER_NONE => 'NONE',
         \Redis::SERIALIZER_PHP => 'PHP',
         2 => 'IGBINARY', // Optional Redis::SERIALIZER_IGBINARY
     ];
 
-    private const MODES = [
+    const MODES = [
         \Redis::ATOMIC => 'ATOMIC',
         \Redis::MULTI => 'MULTI',
         \Redis::PIPELINE => 'PIPELINE',
     ];
 
-    private const COMPRESSION_MODES = [
+    const COMPRESSION_MODES = [
         0 => 'NONE', // Redis::COMPRESSION_NONE
         1 => 'LZF',  // Redis::COMPRESSION_LZF
     ];
 
-    private const FAILOVER_OPTIONS = [
+    const FAILOVER_OPTIONS = [
         \RedisCluster::FAILOVER_NONE => 'NONE',
         \RedisCluster::FAILOVER_ERROR => 'ERROR',
         \RedisCluster::FAILOVER_DISTRIBUTE => 'DISTRIBUTE',

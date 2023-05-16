@@ -21,10 +21,10 @@ use Symfony\Component\VarDumper\Cloner\DumperInterface;
  */
 abstract class AbstractDumper implements DataDumperInterface, DumperInterface
 {
-    public const DUMP_LIGHT_ARRAY = 1;
-    public const DUMP_STRING_LENGTH = 2;
-    public const DUMP_COMMA_SEPARATOR = 4;
-    public const DUMP_TRAILING_COMMA = 8;
+    const DUMP_LIGHT_ARRAY = 1;
+    const DUMP_STRING_LENGTH = 2;
+    const DUMP_COMMA_SEPARATOR = 4;
+    const DUMP_TRAILING_COMMA = 8;
 
     public static $defaultOutput = 'php://output';
 
@@ -179,8 +179,9 @@ abstract class AbstractDumper implements DataDumperInterface, DumperInterface
      * Converts a non-UTF-8 string to UTF-8.
      *
      * @return string|null
+     * @param string|null $s
      */
-    protected function utf8Encode(?string $s)
+    protected function utf8Encode($s)
     {
         if (null === $s || preg_match('//u', $s)) {
             return $s;

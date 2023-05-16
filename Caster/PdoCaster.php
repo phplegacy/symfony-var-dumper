@@ -22,7 +22,7 @@ use Symfony\Component\VarDumper\Cloner\Stub;
  */
 class PdoCaster
 {
-    private const PDO_ATTRIBUTES = [
+    const PDO_ATTRIBUTES = [
         'CASE' => [
             \PDO::CASE_LOWER => 'LOWER',
             \PDO::CASE_NATURAL => 'NATURAL',

@@ -32,7 +32,10 @@ class HtmlDescriptor implements DumpDescriptorInterface
         $this->dumper = $dumper;
     }
 
-    public function describe(OutputInterface $output, Data $data, array $context, int $clientId): void
+    /**
+     * @return void
+     */
+    public function describe(OutputInterface $output, Data $data, array $context, int $clientId)
     {
         if (!$this->initialized) {
             $styles = file_get_contents(__DIR__.'/../../Resources/css/htmlDescriptor.css');

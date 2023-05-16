@@ -38,7 +38,10 @@ final class SourceContextProvider implements ContextProviderInterface
         $this->limit = $limit;
     }
 
-    public function getContext(): ?array
+    /**
+     * @return mixed[]|null
+     */
+    public function getContext()
     {
         $trace = debug_backtrace(\DEBUG_BACKTRACE_PROVIDE_OBJECT | \DEBUG_BACKTRACE_IGNORE_ARGS, $this->limit);
 

@@ -33,7 +33,10 @@ final class RequestContextProvider implements ContextProviderInterface
         $this->cloner->addCasters(ReflectionCaster::UNSET_CLOSURE_FILE_INFO);
     }
 
-    public function getContext(): ?array
+    /**
+     * @return mixed[]|null
+     */
+    public function getContext()
     {
         if (null === $request = $this->requestStack->getCurrentRequest()) {
             return null;

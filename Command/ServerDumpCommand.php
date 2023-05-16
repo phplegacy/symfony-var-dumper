@@ -100,7 +100,10 @@ EOF
         return 0;
     }
 
-    public function complete(CompletionInput $input, CompletionSuggestions $suggestions): void
+    /**
+     * @return void
+     */
+    public function complete(CompletionInput $input, CompletionSuggestions $suggestions)
     {
         if ($input->mustSuggestOptionValuesFor('format')) {
             $suggestions->suggestValues($this->getAvailableFormats());
